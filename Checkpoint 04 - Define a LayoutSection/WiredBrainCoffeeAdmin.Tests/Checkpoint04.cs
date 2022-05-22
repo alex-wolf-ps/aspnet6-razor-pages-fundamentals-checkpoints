@@ -9,7 +9,7 @@ namespace WiredBrainCoffeeAdmin.Tests
     public class Checkpoint04
     {
         [Fact]
-        public void M04_VerifyLayoutSection()
+        public void CH04_VerifyLayoutSection()
         {
             var filePath = TestHelpers.GetRootString() + "WiredBrainCoffeeAdmin"
                 + Path.DirectorySeparatorChar + "Pages"
