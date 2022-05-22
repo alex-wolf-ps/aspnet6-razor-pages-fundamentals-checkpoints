@@ -21,8 +21,11 @@ namespace WiredBrainCoffeeAdmin.Tests
             var doc = new HtmlDocument();
             doc.Load(filePath);
 
+            // The answer could vary a fair amount, this checkpoint has loose requirements
+            Assert.True(doc.Text.Contains("@if"));
             Assert.True(doc.Text.Contains("IsSectionDefined(\"RightFooter\")"));
             Assert.True(doc.Text.Contains("@RenderSection(\"RightFooter\")"));
+            Assert.True(doc.Text.Contains("<img"));
         }
     }
 }
