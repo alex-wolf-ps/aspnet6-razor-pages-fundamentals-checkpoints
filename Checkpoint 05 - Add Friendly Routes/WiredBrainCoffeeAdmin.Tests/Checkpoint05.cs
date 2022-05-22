@@ -9,7 +9,7 @@ namespace WiredBrainCoffeeAdmin.Tests
     public class Checkpoint05
     {
         [Fact]
-        public void M04_VerifyFriendlyRoutes()
+        public void CH05_VerifyFriendlyRoutes()
         {
             var filePath = TestHelpers.GetRootString() + "WiredBrainCoffeeAdmin"
                 + Path.DirectorySeparatorChar + "Pages"
