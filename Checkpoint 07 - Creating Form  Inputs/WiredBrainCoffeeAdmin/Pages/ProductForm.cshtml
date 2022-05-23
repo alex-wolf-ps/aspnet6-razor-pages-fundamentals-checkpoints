@@ -1,0 +1,31 @@
+﻿@using WiredBrainCoffeeAdmin.Data
+@model Product
+
+<form method="post" enctype="multipart/form-data">
+    <div asp-validation-summary="All"></div>
+    <div class="mb-3">
+        <label>Name</label>
+        <input class="form-control" />
+    </div>
+    <div class="mb-3">
+        <label>Short Description</label>
+        <input class="form-control" />
+    </div>
+    <div class="mb-3">
+        <label>Description</label>
+        <textarea class="form-control"></textarea>
+    </div>
+    <div class="mb-3">
+        <label>Price</label>
+        <input class="form-control" />
+    </div>
+    <div class="mb-3">
+        <label>Category</label>
+        <select class="form-control">
+            <option value="Beverage">Beverage</option>
+            <option value="Food">Food</option>
+        </select>
+    </div>
+    
+    <button class="btn btn-success">Add</button>
+</form>
