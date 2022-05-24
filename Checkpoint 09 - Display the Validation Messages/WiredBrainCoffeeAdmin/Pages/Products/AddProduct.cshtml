@@ -1,0 +1,19 @@
+﻿@page "/products/add"
+@model WiredBrainCoffeeAdmin.Pages.Products.AddProductModel
+@{
+}
+<h1>Add New Product</h1>
+<hr />
+
+<div class="row">
+    <div class="col-md-6">
+        <partial name="ProductForm" model="@Model.NewProduct" />
+    </div>
+    <div class="col-md-6">
+        <partial name="HelpWidget" />
+    </div>
+</div>
+
+@section RightFooter {
+    <img src="~/images/menu/cappucino.png" />
+}
