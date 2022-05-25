@@ -1,0 +1,58 @@
+﻿@page
+@model IndexModel
+@{
+    ViewData["Title"] = "Home page";
+}
+
+<div class="container-fluid dashboard">
+    <h1>Welcome to Wired Brain Coffee!</h1>
+    <hr />
+    <div class="row">
+        <div class="col-md-6">
+            <h2>Latest Products</h2>
+            <div class="table-responsive">
+            <vc:product-list count="4" />
+            </div>
+            <h2>Latest Survey Results</h2>
+            <table class="table table-striped table-bordered">
+                <thead>
+                    <tr>
+                        <th>Question</th>
+                        <th>Answer</th>
+                    </tr>
+                </thead>
+            </table>
+        </div>
+        <div class="col-md-6">
+            <div class="card">
+                <div class="card-header">
+                    The Basics
+                </div>
+                <div class="card-body">
+                    <p>Hello, today is @DateTime.Today.Date.ToString("MM/dd/yyyy").</p>
+                    @{
+                        var temperature = 55;
+                    }
+                    <p>The current temperature is @temperature degrees.</p>
+                    @if(temperature < 60)
+                    {
+                        <p>We recommend a coat until it warms up</p>
+                    }
+                </div>
+            </div>
+
+            <!-- Partial view goes here -->
+
+            <h2>Weekly Stats</h2>
+            <table class="table table-bordered table-striped">
+                @foreach(var item in Model.OrderStats)
+                {
+                    <tr>
+                        <td>@item.Key</td>
+                        <td>@item.Value</td>
+                    </tr>
+                }
+            </table>
+        </div>
+    </div>
+</div>
