@@ -47,7 +47,7 @@ namespace WiredBrainCoffeeAdmin.Tests
                 ProductRepository productRepository = new ProductRepository(context);
                 productRepository.Delete(1);
 
-                var products = productRepository.GetAll();
+                var products = context.Products.ToList();
 
                 Assert.Equal(1, products.Count);
             }
