@@ -9,9 +9,9 @@ builder.Services.AddDbContext<WiredContext>(options =>
     options.UseSqlite(
         builder.Configuration.GetConnectionString("WiredBrain")));
 builder.Services.AddScoped<IProductRepository, ProductRepository>();
-builder.Services.AddHttpClient();
-builder.Services.AddHttpClient<ITicketService, TicketService>(options =>
-            options.BaseAddress = new Uri("https://wiredbraincoffeeadmin.azurewebsites.net/"));
+
+// Register the HTTPClient here
+
 var app = builder.Build();
 
 await EnsureDbCreated(app.Services, app.Logger);
