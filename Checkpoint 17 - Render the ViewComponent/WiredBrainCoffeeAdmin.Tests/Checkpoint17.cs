@@ -9,7 +9,7 @@ namespace WiredBrainCoffeeAdmin.Tests
     public class Checkpoint17
     {
         [Fact]
-        public void M03_VerifyRazorConditional()
+        public void CH17_VerifyViewComponentDisplay()
         {
             var filePath = TestHelpers.GetRootString() + "WiredBrainCoffeeAdmin"
                 + Path.DirectorySeparatorChar + "Pages"
