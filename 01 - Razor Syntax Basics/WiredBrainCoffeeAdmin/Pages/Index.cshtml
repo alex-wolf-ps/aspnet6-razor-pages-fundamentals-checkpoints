@@ -21,7 +21,13 @@
                         <th>Answer</th>
                     </tr>
                 </thead>
-                <!-- HINT: SurveyResults foreach loop goes here -->
+                @foreach(var item in Model.SurveyResults)
+                {
+                    <tr>
+                        <td>@item.Question</td>
+                        <td>@item.Answer</td>
+                    </tr>
+                }
             </table>
         </div>
         <div class="col-md-6">

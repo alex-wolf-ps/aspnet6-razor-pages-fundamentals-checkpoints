@@ -66,7 +66,13 @@
                 </div>
                 <div class="col-md-4">
                     <div class="footer-pic">
-                        <!-- Layout section goes here -->
+                        @if (IsSectionDefined("RightFooter"))
+                        {
+                            @RenderSection("RightFooter")
+                        } else
+                        {
+                            <img src="~/images/menu/waffles.png" />
+                        }
                     </div>
                 </div>
             </div>
