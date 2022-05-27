@@ -18,13 +18,11 @@ using Xunit;
 
 namespace WiredBrainCoffeeAdmin.Tests
 {
-    public class Checkpoint19
+    public class Checkpoint21
     {
         [Fact]
-        public async void CH20_VerifyHttpClientGetData()
+        public async void CH21_VerifysHttpClientSendData()
         {
-            var items = JsonSerializer.Deserialize<List<HelpTicket>>("[{\"Id\":1,\"Title\":\"Menu item issue\",\"Description\":\"Adding a new menu item sometimes errors.\",\"Status\":\"Pending\"}]");
-            
             // ARRANGE
             var handlerMock = new Mock<HttpMessageHandler>(MockBehavior.Strict);
             handlerMock
@@ -39,7 +37,7 @@ namespace WiredBrainCoffeeAdmin.Tests
                .ReturnsAsync(new HttpResponseMessage()
                {
                    StatusCode = HttpStatusCode.OK,
-                   Content = new StringContent("[{\"id\":1,\"title\":\"Menu item issue\",\"description\":\"Adding a new menu item sometimes errors.\",\"status\":\"Pending\"}]"),
+                   Content = new StringContent("Created."),
                })
                .Verifiable();
 
@@ -52,10 +50,10 @@ namespace WiredBrainCoffeeAdmin.Tests
             var subjectUnderTest = new TicketService(httpClient);
 
             // ACT
-            var result = await subjectUnderTest.GetAll();
+            var result = await subjectUnderTest.Add(new HelpTicket() { Id = 1 });
 
             // Assert
-            Assert.True(result != null && items.FirstOrDefault()?.Title == result.FirstOrDefault()?.Title);
+            Assert.Equal(result, "Created.");
         }
     }
 }

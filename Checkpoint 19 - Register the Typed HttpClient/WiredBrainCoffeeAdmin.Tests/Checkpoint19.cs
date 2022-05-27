@@ -9,7 +9,7 @@ namespace WiredBrainCoffeeAdmin.Tests
     public class Checkpoint19
     {
         [Fact]
-        public void CH18_VerifyHttpClientRegistration()
+        public void CH19_VerifyTypedHttpClientRegistration()
         {
             var filePath = TestHelpers.GetRootString() + "WiredBrainCoffeeAdmin"
                 + Path.DirectorySeparatorChar + "Program.cs";
