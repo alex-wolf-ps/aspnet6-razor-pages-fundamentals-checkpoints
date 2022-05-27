@@ -24,7 +24,7 @@ namespace WiredBrainCoffeeAdmin.Tests
 
             foreach (var input in inputTags)
             {
-                Assert.True(input.Attributes["asp-for"] != null && input.Attributes["asp-for"].Value.Contains("@Model"),
+                Assert.True(input.Attributes["asp-for"] != null,
                     "Every form input should include the `asp-for` attribute with the corresponding model property assigned.");
             }
 
@@ -32,7 +32,15 @@ namespace WiredBrainCoffeeAdmin.Tests
 
             foreach (var select in selectTags)
             {
-                Assert.True(select.Attributes["asp-for"] != null && select.Attributes["asp-for"].Value.Contains("@Model"),
+                Assert.True(select.Attributes["asp-for"] != null,
+                    "Every form select element should include the `asp-for` attribute with the corresponding model property assigned.");
+            }
+
+            var textareas = doc.DocumentNode.Descendants("textarea");
+
+            foreach (var text in textareas)
+            {
+                Assert.True(text.Attributes["asp-for"] != null,
                     "Every form select element should include the `asp-for` attribute with the corresponding model property assigned.");
             }
         }

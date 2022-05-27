@@ -5,23 +5,23 @@
     <div asp-validation-summary="All"></div>
     <div class="mb-3">
         <label>Name</label>
-        <input class="form-control" />
+        <input asp-for="Name" class="form-control" />
     </div>
     <div class="mb-3">
         <label>Short Description</label>
-        <input class="form-control" />
+        <input asp-for="ShortDescription" class="form-control" />
     </div>
     <div class="mb-3">
         <label>Description</label>
-        <textarea class="form-control"></textarea>
+        <textarea asp-for="Description" class="form-control"></textarea>
     </div>
     <div class="mb-3">
         <label>Price</label>
-        <input class="form-control" />
+        <input asp-for="Price" class="form-control" />
     </div>
     <div class="mb-3">
         <label>Category</label>
-        <select class="form-control">
+        <select asp-for="Category" class="form-control">
             <option value="Beverage">Beverage</option>
             <option value="Food">Food</option>
         </select>
