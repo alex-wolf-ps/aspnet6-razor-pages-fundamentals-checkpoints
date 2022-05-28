@@ -43,7 +43,7 @@ namespace WiredBrainCoffeeAdmin.Pages.Products
             NewProduct.Created = DateTime.Now;
             this.productRepo.Add(NewProduct);
 
-            return Page();
+            return RedirectToPage("ViewAllProducts");
         }
     }
 }

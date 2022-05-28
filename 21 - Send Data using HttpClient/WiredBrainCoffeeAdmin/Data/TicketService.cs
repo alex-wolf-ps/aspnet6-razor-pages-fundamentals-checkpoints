@@ -14,7 +14,8 @@ namespace WiredBrainCoffeeAdmin.Data
         public async Task<string> Add(HelpTicket ticket)
         {
             // TODO: Post the ticket data
-            return null;
+            var response = await client.PostAsJsonAsync<HelpTicket>("/api/tickets", ticket);
+            return await response.Content.ReadAsStringAsync();
         }
 
         public async Task<List<HelpTicket>> GetAll()

@@ -11,6 +11,7 @@ builder.Services.AddDbContext<WiredContext>(options =>
 builder.Services.AddScoped<IProductRepository, ProductRepository>();
 
 // Register the HTTPClient here
+builder.Services.AddHttpClient();
 
 var app = builder.Build();
 

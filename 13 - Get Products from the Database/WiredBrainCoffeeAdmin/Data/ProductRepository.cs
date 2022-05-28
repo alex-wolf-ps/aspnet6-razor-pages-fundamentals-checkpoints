@@ -24,7 +24,7 @@ namespace WiredBrainCoffeeAdmin.Data
         public List<Product> GetAll()
         {
             // Add logic to get all the products
-            return null;
+            return this.wiredContext.Products.ToList();
         }
 
         public Product GetById(int id)

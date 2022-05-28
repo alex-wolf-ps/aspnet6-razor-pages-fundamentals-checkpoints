@@ -20,7 +20,7 @@ namespace WiredBrainCoffeeAdmin.Data
         public async Task<List<HelpTicket>> GetAll()
         {
             // TODO: Retrieve all help tickets from the "/api/tickets" path
-            return null;
+            return await this.client.GetFromJsonAsync<List<HelpTicket>>("/api/tickets");
         }
     }
 }

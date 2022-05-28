@@ -13,7 +13,8 @@ namespace WiredBrainCoffeeAdmin.Data
 
         public void Add(Product product)
         {
-            // Add code to save the product
+            wiredContext.Products.Add(product);
+            wiredContext.SaveChanges();
         }
 
         public void Delete(int id)

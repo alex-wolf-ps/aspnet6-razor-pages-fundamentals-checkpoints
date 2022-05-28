@@ -11,7 +11,7 @@
         <div class="col-md-6">
             <h2>Latest Products</h2>
             <div class="table-responsive">
-                <!-- View component should render here-->
+                @await Component.InvokeAsync("ProductList")
             </div>
             <h2>Latest Survey Results</h2>
             <table class="table table-striped table-bordered">

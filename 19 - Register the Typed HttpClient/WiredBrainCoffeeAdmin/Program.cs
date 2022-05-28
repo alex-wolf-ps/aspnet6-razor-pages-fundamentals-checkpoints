@@ -11,6 +11,7 @@ builder.Services.AddScoped<IProductRepository, ProductRepository>();
 builder.Services.AddHttpClient();
 
 // TODO: Register the typed HTTPClient here
+builder.Services.AddHttpClient<ITicketService, TicketService>();
 
 var app = builder.Build();
 

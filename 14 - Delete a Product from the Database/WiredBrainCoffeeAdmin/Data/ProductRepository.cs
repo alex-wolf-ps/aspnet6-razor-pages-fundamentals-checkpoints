@@ -18,7 +18,9 @@ namespace WiredBrainCoffeeAdmin.Data
 
         public void Delete(int id)
         {
-            // Add code to delete an item from the database using the id
+            var productToDelete = this.wiredContext.Products.FirstOrDefault(p => p.Id == id);
+            wiredContext.Products.Remove(productToDelete);
+            wiredContext.SaveChanges();
         }
 
         public List<Product> GetAll()
