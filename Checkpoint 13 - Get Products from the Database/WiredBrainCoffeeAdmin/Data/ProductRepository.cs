@@ -13,12 +13,12 @@ namespace WiredBrainCoffeeAdmin.Data
 
         public void Add(Product product)
         {
-            // TODO: Implement this later
+            // Ignore this for now
         }
 
         public void Delete(int id)
         {
-            // TODO: Implement this later
+            // Ignore this for now
         }
 
         public List<Product> GetAll()
@@ -35,7 +35,7 @@ namespace WiredBrainCoffeeAdmin.Data
 
         public void Update(Product product)
         {
-            // TODO: Implement this later
+            // Ignore this for now
         }
     }
 }
