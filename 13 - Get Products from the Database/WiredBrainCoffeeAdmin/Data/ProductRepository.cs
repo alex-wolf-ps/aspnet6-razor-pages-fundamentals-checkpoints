@@ -30,7 +30,7 @@ namespace WiredBrainCoffeeAdmin.Data
         public Product GetById(int id)
         {
             // Add logic to get one product by its id
-            return null;
+            return this.wiredContext.Products.Find(id);
         }
 
         public void Update(Product product)
